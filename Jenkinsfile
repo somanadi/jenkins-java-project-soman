@@ -1,9 +1,11 @@
-pipline {
+pipeline {
   agent any
 
-  stages{
+  stages {
     stage('build') {
+      steps {
 	sh 'ant -f build.xml -v'
+       }
      }
   }
 }

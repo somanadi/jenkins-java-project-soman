@@ -21,7 +21,7 @@
 
   <!-- Creates the  build, docs and dist directory-->
   <target name="makedir" depends="clean">
-    <mkdir dir="${build.dir}">
+    <mkdir dir="${build.dir}" />
     <mkdir dir="${report.dir}" />
   </target>
 

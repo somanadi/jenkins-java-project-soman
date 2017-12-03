@@ -4,10 +4,10 @@ pipeline {
   
   stages {
     stage('Unit Tests'){
-    steps{
-     agent { 
-       label 'apache'
-       }
+      steps {
+        agent { 
+          label 'apache'
+        }
 	sh 'ant -f test.xml -v'
         junit 'reports/result.xml'
       }
@@ -35,10 +35,10 @@ pipeline {
      }
  
    stage("Running on CentOS") {
-     agent {
-       label 'apache'
-	}
      steps{
+        agent {
+           label 'apache'
+        }
        sh "wget http://iamsoman1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
        sh "java -jar rectangle_${env.BUILD_NUMBER} 3 4"
 	}

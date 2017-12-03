@@ -17,28 +17,28 @@ pipeline {
 
 
   stage('build') {
-      steps {
-	agent {
+      agent {
           label 'apache'
        }
+      steps {
 	sh 'ant -f build.xml -v'
        }
      }
    
    stage('deploy') {
-     steps {
-       agent {
-         label 'apache'
+      agent {
+          label 'apache'
        }
+     steps {
        sh "cp dist/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/all"
        }
      }
  
    stage("Running on CentOS") {
+      agent {
+          label 'apache'
+       }
      steps{
-        agent {
-           label 'apache'
-        }
        sh "wget http://iamsoman1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
        sh "java -jar rectangle_${env.BUILD_NUMBER} 3 4"
 	}

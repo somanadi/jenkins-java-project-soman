@@ -13,10 +13,12 @@
 
   <target name="clean">
     <delete dir="${build.dir}"  />
+    <delete dir="${report.dir}" />
   </target>
 
   <target name="makedir" depends="clean">
     <mkdir dir="${build.dir}" />
+    <mkdir dir="${report.dir}" />
   </target>
 
   <target name="compile" depends="makedir">

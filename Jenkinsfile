@@ -26,7 +26,7 @@ pipeline {
      }
    
    stage('deploy') {
-     steps{
+     steps {
        agent {
          label 'apache'
        }
@@ -35,8 +35,8 @@ pipeline {
      }
  
    stage("Running on CentOS") {
-     agent{
-      label 'apache'
+     agent {
+       label 'apache'
 	}
      steps{
        sh "wget http://iamsoman1.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"

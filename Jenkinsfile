@@ -58,6 +58,5 @@ pipeline {
            sh "wget https://iamsoman1.mylabserver/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"  
            sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
         }
-
-      }   
+    }
 }

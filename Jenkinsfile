@@ -82,7 +82,6 @@ pipeline {
        branch 'development'
       }
      steps {
-       
         echo 'checking out development branch'
         sh 'git checkout development'
         echo 'checkingout master'

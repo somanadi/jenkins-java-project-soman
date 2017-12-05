@@ -84,7 +84,7 @@ pipeline {
      steps {
         echo 'checking out development branch'
         sh 'git checkout development'
-        echo 'checking out master'
+        echo 'checkingout master'
         sh 'git checkout master'
         echo 'merging development into master branch'
         sh 'git merge development'

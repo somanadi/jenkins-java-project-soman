@@ -82,6 +82,7 @@ pipeline {
        branch 'development'
       }
      steps {
+        sh 'git pull origin development'
         echo 'checking out development branch'
         sh 'git checkout development'
         echo 'checkingout master'

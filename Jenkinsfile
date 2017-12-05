@@ -82,8 +82,7 @@ pipeline {
        branch 'development'
       }
      steps {
-        echo 'Stashing any Local Changes'
-        sh 'git stash'
+       
         echo 'checking out development branch'
         sh 'git checkout development'
         echo 'checkingout master'

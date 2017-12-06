@@ -83,6 +83,7 @@ pipeline {
       }
      steps {
         echo 'checking '
+        echo 'test on test'
         sh 'git checkout development'
         echo 'checkingout master'
         sh 'git checkout master'

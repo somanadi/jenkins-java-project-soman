@@ -87,6 +87,7 @@ pipeline {
         sh 'git checkout development'
         echo 'checkingout master'
         sh 'git checkout master'
+        sh 'git pull origin master'
         echo 'merging development into master branch'
         sh 'git merge development'
         echo 'Pushing to origin master'

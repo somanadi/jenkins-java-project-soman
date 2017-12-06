@@ -85,6 +85,7 @@ pipeline {
         echo 'checking '
         echo 'test on test-Adithya Soman'
         sh 'git checkout development'
+        sh 'git pull origin development'
         echo 'checkingout master'
         sh 'git checkout master'
         sh 'git pull origin master'

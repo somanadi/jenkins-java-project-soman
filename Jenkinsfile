@@ -19,7 +19,7 @@ pipeline {
      steps {
          echo "My Branch Name: ${env.Branch_NAME}"
       script {
-        dev myLib=new linuxacademy.git.gitstuff();
+        myLib=new linuxacademy.git.gitstuff();
         echo "My Commit: ${myLib.gitCommit("$env.WORKSPACE}/.git")}"
            }
 	}

@@ -6,7 +6,14 @@ pipeline {
 
    }
 
-  
+  stages {
+	stage('Say Hello') {
+	  agent any
+          steps {
+            sayHello 'AWESOME student!'
+           }
+    }
+ 
   stages {
     stage('Unit Tests'){
       agent {
